@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import UserForm from "./components/UserForm";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserForm />
+
+      <h3>Your Form Data</h3>
+      <p>{UserForm.firstName}</p>
+      <p>{UserForm.lastName}</p>
+      <p>{UserForm.email}</p>
+      <p>{UserForm.password}</p>
+      <p>{UserForm.confirmPassword}</p>
     </div>
   );
 }
